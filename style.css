@@ -1,0 +1,129 @@
+:root {
+    --primary-color: #090a0a;
+    --secondary-color: #e62323;
+    --text-color: #333;
+    --background-color: #afdeec;
+    --input-background: #ffffff;
+}
+
+body {
+    font-family:  sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #e0e8ff, #f0f4ff);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background-color: var(--background-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.search-container {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid #e1e4e8;
+    border-radius: 50px 0 0 50px;
+    background-color: var(--input-background);
+    transition: all 0.3s ease;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.2);
+}
+
+#searchButton {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0 50px 50px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+
+.history-container {
+    background-color: var(--input-background);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #e1e4e8;
+}
+
+#searchHistory {
+    list-style-type: none;
+    padding: 0;
+}
+
+#searchHistory li {
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f1f3f5;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+#searchHistory li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#clearHistoryButton {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 18px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    #searchInput, #searchButton {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
